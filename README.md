@@ -1,6 +1,6 @@
 # ModerApiTest
 
-Wab API sample with C#9 and ASP.NET Core 5.0.
+Web API sample with C#9 and ASP.NET Core 5.0.
 
 ## Dependencies
 * .NET Core SDK 5.0 (available at https://dotnet.microsoft.com/download)
