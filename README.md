@@ -21,3 +21,9 @@ Web API sample with C#9 and ASP.NET Core 5.0.
 * folder Nginx : configurtion of nginx
 * folder Postman : a postman collection to test the API
 
+## Containers
+
+In that application 3 docker containers are running:
+* a nginx front end used as reverse proxy, serving requests to the server.
+* a server implementing web APIs, listening the requests coming from the frontend and accessing the mongodb database.
+* a mongodb database treating requests coming from the server by maintaining 2 collections: users and articles.
