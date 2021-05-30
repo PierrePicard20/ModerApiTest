@@ -1,0 +1,34 @@
+version: '3.4'
+
+services:
+  moderapitestdb:
+    image: mongo
+    container_name: moderapitestdb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - /site:/data/db
+
+  moderapitest:
+    image: ${DOCKER_REGISTRY-}moderapitest
+    build:
+      context: .
+      dockerfile: ModerApiTest/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - "ContainerConnectionString=mongodb://moderapitestdb:27017"
+    links:
+      - moderapitestdb
+    ports:
+      - "80:80"
+
+  frontend:
+    image: nginx
+    build:
+      context: .
+      dockerfile: Nginx/Dockerfile
+    links:
+      - moderapitest
+    ports:
+      - "5000:5000"

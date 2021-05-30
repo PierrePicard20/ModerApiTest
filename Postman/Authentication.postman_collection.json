@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "38ea9e63-c5ba-46c8-809c-1165c8a23fc9",
+		"name": "Authentication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/auth/register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"John\",\r\n    \"last_name\": \"Doe\",\r\n    \"email\" : \"ww@foo.com\",\r\n    \"password\": \"abcdabcd\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				},
+				"description": "Register of a user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"ww@foo.com\",\r\n    \"password\": \"abcdabcd\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/auth/logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ind3QGZvby5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiI2MGFiNWQ4M2I4MmM2MzhjM2Q5YzU4N2YiLCJuYmYiOjE2MjIxMzUzOTYsImV4cCI6MTYyMjEzODk5NiwiaWF0IjoxNjIyMTM1Mzk2LCJpc3MiOiJtb2RlcmxhYi5jb20iLCJhdWQiOiJtb2RlcmxhYi5jb20ifQ.wnLgihbHMct2mj6PMH20UonvASmBeEilwbgwWiFjuY4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/user/60ab5d83b82c638c3d9c587f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impkb2VAZm9vLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3NpZCI6IjYwYjBhNDkxMjY2NzI3MGQ4OGZkMTdkZSIsIm5iZiI6MTYyMjM3MzMzMiwiZXhwIjoxNjIyMzc2OTMyLCJpYXQiOjE2MjIzNzMzMzIsImlzcyI6Im1vZGVybGFiLmNvbSIsImF1ZCI6Im1vZGVybGFiLmNvbSJ9.BUuxjOQOezVqHfcxichokWtu9xLFQHpCOli9ZYOjgjc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/60b0a4912667270d88fd17de",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"60b0a4912667270d88fd17de"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/user/60ab5d83b82c638c3d9c587f",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ind3QGZvby5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiI2MGFiNWQ4M2I4MmM2MzhjM2Q5YzU4N2YiLCJuYmYiOjE2MjE4NzEyOTcsImV4cCI6MTYyMTg3NDg5NywiaWF0IjoxNjIxODcxMjk3LCJpc3MiOiJtb2RlcmxhYi5jb20iLCJhdWQiOiJtb2RlcmxhYi5jb20ifQ.XYhM06t7ThQof7D9109FlAMiOcxRSissdRs_Q_I6e9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"John\",\r\n    \"last_name\": \"Doe\",\r\n    \"email\" : \"jdoe@foo.com\",\r\n    \"password\": \"abcdabcd\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/60ab5d83b82c638c3d9c587f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"60ab5d83b82c638c3d9c587f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/user/10",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/user/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/article/60abd2e04b0967ba5603e85b",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/article/60abd2e04b0967ba5603e85b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"article",
+						"60abd2e04b0967ba5603e85b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/article",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ind3QGZvby5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiI2MGFiNWQ4M2I4MmM2MzhjM2Q5YzU4N2YiLCJuYmYiOjE2MjE4NzMzMTksImV4cCI6MTYyMTg3NjkxOSwiaWF0IjoxNjIxODczMzE5LCJpc3MiOiJtb2RlcmxhYi5jb20iLCJhdWQiOiJtb2RlcmxhYi5jb20ifQ.NfREMRrNayIDCFqkVlsW5NiXkWA8kbYFpPzEwRQ_9Cg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"ASP.NET Core\",\r\n    \"description\": \"how to build web APIs\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/article",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"article"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/article/100",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impkb2VAZm9vLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3NpZCI6IjYwYWI1ZDgzYjgyYzYzOGMzZDljNTg3ZiIsIm5iZiI6MTYyMjE0NjY4OCwiZXhwIjoxNjIyMTUwMjg4LCJpYXQiOjE2MjIxNDY2ODgsImlzcyI6Im1vZGVybGFiLmNvbSIsImF1ZCI6Im1vZGVybGFiLmNvbSJ9.sJPzxN7jg9z7m9N0yngpvV0zoMDb_UP-5PR68vfFORc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/article/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"article",
+						"100"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
