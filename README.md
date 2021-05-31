@@ -3,10 +3,12 @@
 A Web API sample in C#9 and ASP.NET Core 5.0.
 
 ## Dependencies
-* .NET Core SDK 5.0 (available at https://dotnet.microsoft.com/download)
+* .NET Core SDK 5.0
 * Docker
 * Mongodb
 * Nginx
+
+Only Docker is actually required to be installed to run the application as other dependencies will be fetched as docker images.
 
 ## To build and run locally
 	To pull the required docker images, build and run, simply type the following command:
