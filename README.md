@@ -1,6 +1,6 @@
 # ModerApiTest
 
-A Web API sample in C#9 and ASP.NET Core 5.0.
+A Web API sample application in C#9 and ASP.NET Core 5.0.
 
 ## Dependencies
 * .NET Core SDK 5.0
